@@ -2,8 +2,8 @@
 Exam 3, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October, 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Jacob Bowman.  October, 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -77,13 +77,25 @@ And this one for n=14:
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
     #   you must NOT use string multiplication.
     ####################################################################
-
+    for k in range(n):
+        a = str()
+        for l in range(n - 1, k, -1):
+            a = a + ' '
+        for l in range(k + 1):
+            a = a + str((l+1) % 10)
+        a = a + ' **'
+        for l in range(k):
+            a = a + '*'
+        a = a + ' '
+        for l in range(n - k, 0, -1):
+            a = a + str(l % 10)
+        print(a)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
